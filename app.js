@@ -8,7 +8,7 @@ var connection = mysql.createConnection({
 });
 
 var app = express();
-
+console.log('CONNECTING....')
 connection.connect(function(err){
   if(err){
     console.log(err);
