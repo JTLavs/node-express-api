@@ -9,12 +9,14 @@ var connection = mysql.createConnection({
 
 var app = express();
 
+connection.connect(function(err){
+  if(err)
+    console.log(err);
+  else
+    console.log('Connection successful!')
+});
+
 app.get('/', function(req,res){
-  connection.connect(function(err){
-    if(err)
-      res.send(err);
-    else
-      res.send('Connection successful!');
-  });
+  res.send('CONNECTED TO RDS!')
 })
 app.listen(8081);
