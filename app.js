@@ -10,9 +10,10 @@ var connection = mysql.createConnection({
 var app = express();
 
 connection.connect(function(err){
-  if(err)
+  if(err){
     console.log(err);
-  else
+    return;
+  }
     console.log('Connection successful!')
 });
 
