@@ -4,7 +4,8 @@ var connection = mysql.createConnection({
   host: 'myawsdb.cpemae4exgq9.eu-west-1.rds.amazonaws.com',
   user : 'jameslavery',
   password:'awsdatabase123',
-  database:'cities'
+  database:'cities',
+  port:3306
 });
 
 var app = express();
