@@ -12,12 +12,9 @@ var app = express();
 app.get('/', function(req,res){
   connection.connect(function(err){
     if(err)
-      throw err;
+      res.send(err);
     else
       res.send('Connection successful!');
   });
 })
-
-
-
 app.listen(8081);
