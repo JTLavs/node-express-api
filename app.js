@@ -12,9 +12,10 @@ console.log('CONNECTING....')
 connection.connect(function(err){
   if(err){
     console.log(err);
-    return;
+  }else{
+      console.log('Connection successful!')
   }
-    console.log('Connection successful!')
+
 });
 
 app.get('/', function(req,res){
